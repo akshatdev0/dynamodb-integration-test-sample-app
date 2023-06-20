@@ -10,7 +10,7 @@ import static org.testcontainers.containers.localstack.LocalStackContainer.Servi
 @TestConfiguration(proxyBeanMethods = false)
 public class TestcontainersConfig {
 
-    private static final DockerImageName LOCALSTACK_IMAGE_NAME = DockerImageName.parse("localstack/localstack:2.1.0-arm64");
+    private static final DockerImageName LOCALSTACK_IMAGE_NAME = DockerImageName.parse("localstack/localstack:2.1.0");
 
     @Bean
     public LocalStackContainer localStackContainer() {

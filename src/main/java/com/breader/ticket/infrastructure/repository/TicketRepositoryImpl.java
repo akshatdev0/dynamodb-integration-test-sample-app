@@ -15,8 +15,9 @@ public class TicketRepositoryImpl implements TicketRepository {
     private final DynamoDbTable<TicketDocument> ticketTable;
 
     @Override
-    public void save(Ticket ticket) {
+    public TicketId save(Ticket ticket) {
         ticketTable.putItem(TicketDocument.fromTicket(ticket));
+        return ticket.ticketId();
     }
 
     @Override
