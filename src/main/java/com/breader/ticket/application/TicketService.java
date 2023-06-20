@@ -11,10 +11,7 @@ public class TicketService {
     private final TicketRepository ticketRepository;
 
     public TicketId handle(CreateTicketCommand createTicketCommand) {
-        TicketId newTicketId = TicketId.create();
-        Ticket ticket = new Ticket(newTicketId, createTicketCommand.eventName());
-        ticketRepository.save(ticket);
-
-        return newTicketId;
+        Ticket ticket = new Ticket(TicketId.create(), createTicketCommand.eventName());
+        return ticketRepository.save(ticket);
     }
 }

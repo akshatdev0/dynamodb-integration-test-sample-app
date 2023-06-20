@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface TicketRepository {
 
-    void save(Ticket ticket);
+    TicketId save(Ticket ticket);
 
     Optional<Ticket> findById(TicketId ticketId);
 
