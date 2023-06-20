@@ -5,37 +5,18 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.EventListener;
 import org.testcontainers.containers.localstack.LocalStackContainer;
-import org.testcontainers.utility.DockerImageName;
-import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
-import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 import static org.testcontainers.containers.localstack.LocalStackContainer.Service.DYNAMODB;
 
 @TestConfiguration(proxyBeanMethods = false)
-public class AwsServicesTestConfig {
-
-    private static final DockerImageName LOCALSTACK_IMAGE_NAME = DockerImageName.parse("localstack/localstack:2.1.0-arm64");
+public class TicketDbConfig {
 
     @Bean
-    public LocalStackContainer localStackContainer() {
-        return new LocalStackContainer(LOCALSTACK_IMAGE_NAME).withServices(DYNAMODB);
-    }
-
-    @Bean
-    @Profile("test")
-    public AwsCredentialsProvider awsCredentialsProvider(LocalStackContainer localStack) {
-        AwsBasicCredentials creds = AwsBasicCredentials.create(localStack.getAccessKey(), localStack.getSecretKey());
-        return StaticCredentialsProvider.create(creds);
-    }
-
-    @Bean
-    @Profile("test")
     public DynamoDbClient dynamoDbClient(AwsCredentialsProvider credentialsProvider, LocalStackContainer localstack) {
         return DynamoDbClient.builder()
                 .credentialsProvider(credentialsProvider)

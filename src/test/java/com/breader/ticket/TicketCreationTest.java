@@ -1,6 +1,8 @@
 package com.breader.ticket;
 
-import com.breader.config.AwsServicesTestConfig;
+import com.breader.config.AwsConfig;
+import com.breader.config.TestcontainersConfig;
+import com.breader.config.TicketDbConfig;
 import com.breader.ticket.infrastructure.web.command.CreateTicketCommand;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
@@ -18,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-@Import(AwsServicesTestConfig.class)
+@Import({TestcontainersConfig.class, AwsConfig.class, TicketDbConfig.class})
 class TicketCreationTest {
 
     @Autowired
