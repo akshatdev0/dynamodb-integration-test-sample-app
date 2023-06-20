@@ -1,10 +1,10 @@
-package com.breader.infrastructure.web;
+package com.breader.ticket.infrastructure.web;
 
-import com.breader.application.TicketRepository;
-import com.breader.application.TicketService;
-import com.breader.domain.TicketId;
-import com.breader.infrastructure.web.command.CreateTicketCommand;
-import com.breader.infrastructure.web.model.TicketDto;
+import com.breader.ticket.application.TicketRepository;
+import com.breader.ticket.application.TicketService;
+import com.breader.ticket.domain.TicketId;
+import com.breader.ticket.infrastructure.web.command.CreateTicketCommand;
+import com.breader.ticket.infrastructure.web.model.TicketDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

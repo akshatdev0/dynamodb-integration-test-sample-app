@@ -1,6 +1,6 @@
-package com.breader.infrastructure.web.model;
+package com.breader.ticket.infrastructure.web.model;
 
-import com.breader.domain.Ticket;
+import com.breader.ticket.domain.Ticket;
 
 import java.util.UUID;
 

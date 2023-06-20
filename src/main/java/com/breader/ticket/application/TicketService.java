@@ -1,8 +1,8 @@
-package com.breader.application;
+package com.breader.ticket.application;
 
-import com.breader.domain.Ticket;
-import com.breader.domain.TicketId;
-import com.breader.infrastructure.web.command.CreateTicketCommand;
+import com.breader.ticket.domain.Ticket;
+import com.breader.ticket.domain.TicketId;
+import com.breader.ticket.infrastructure.web.command.CreateTicketCommand;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

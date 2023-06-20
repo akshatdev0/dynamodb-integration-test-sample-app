@@ -1,9 +1,9 @@
-package com.breader.infrastructure.config;
+package com.breader.ticket.infrastructure.config;
 
-import com.breader.application.TicketRepository;
-import com.breader.application.TicketService;
-import com.breader.infrastructure.repository.TicketDocument;
-import com.breader.infrastructure.repository.TicketRepositoryImpl;
+import com.breader.ticket.application.TicketRepository;
+import com.breader.ticket.application.TicketService;
+import com.breader.ticket.infrastructure.repository.TicketDocument;
+import com.breader.ticket.infrastructure.repository.TicketRepositoryImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

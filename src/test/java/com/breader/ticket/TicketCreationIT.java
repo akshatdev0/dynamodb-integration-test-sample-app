@@ -1,6 +1,7 @@
-package com.breader;
+package com.breader.ticket;
 
-import com.breader.infrastructure.web.command.CreateTicketCommand;
+import com.breader.config.AwsServicesTestConfig;
+import com.breader.ticket.infrastructure.web.command.CreateTicketCommand;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

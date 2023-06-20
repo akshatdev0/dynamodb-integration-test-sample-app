@@ -1,5 +1,6 @@
 package com.breader;
 
+import com.breader.config.AwsServicesTestConfig;
 import org.springframework.boot.SpringApplication;
 
 public class TestApplication {

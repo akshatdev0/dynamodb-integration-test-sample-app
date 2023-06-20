@@ -1,6 +1,6 @@
-package com.breader;
+package com.breader.config;
 
-import com.breader.infrastructure.repository.TicketDocument;
+import com.breader.ticket.infrastructure.repository.TicketDocument;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.ApplicationContext;

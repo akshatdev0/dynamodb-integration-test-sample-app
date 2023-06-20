@@ -1,8 +1,8 @@
-package com.breader.infrastructure.repository;
+package com.breader.ticket.infrastructure.repository;
 
-import com.breader.application.TicketRepository;
-import com.breader.domain.Ticket;
-import com.breader.domain.TicketId;
+import com.breader.ticket.application.TicketRepository;
+import com.breader.ticket.domain.Ticket;
+import com.breader.ticket.domain.TicketId;
 import lombok.RequiredArgsConstructor;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.enhanced.dynamodb.Key;

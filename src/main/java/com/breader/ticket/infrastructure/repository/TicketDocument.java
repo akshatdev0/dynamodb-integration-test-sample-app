@@ -1,7 +1,7 @@
-package com.breader.infrastructure.repository;
+package com.breader.ticket.infrastructure.repository;
 
-import com.breader.domain.Ticket;
-import com.breader.domain.TicketId;
+import com.breader.ticket.domain.Ticket;
+import com.breader.ticket.domain.TicketId;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

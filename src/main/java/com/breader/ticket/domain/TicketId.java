@@ -1,4 +1,4 @@
-package com.breader.domain;
+package com.breader.ticket.domain;
 
 import java.util.UUID;
 
