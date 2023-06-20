@@ -19,15 +19,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @Import(AwsServicesTestConfig.class)
-class TicketCreationIT {
+class TicketCreationTest {
 
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+    @Autowired
+    private ObjectMapper objectMapper;
 
     @Test
     void should_save_new_ticket(@Autowired MockMvc mockMvc) throws Exception {
         mockMvc.perform(post("/tickets")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(OBJECT_MAPPER.writeValueAsString(new CreateTicketCommand("RHCP"))))
+                        .content(objectMapper.writeValueAsString(new CreateTicketCommand("RHCP"))))
                 .andExpect(status().isCreated());
     }
 }
